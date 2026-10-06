@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+    --maincolor: #485C11;
+    --c1: rgba(86, 39, 226, 0.1);
+    --c2: #1a1a1a;
+    --c3: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--c2);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    margin-top: 5px;
+    padding: 0 16px;
+    top: 0;
+    z-index: 3;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: var(--c3);
+}
+
+#logo {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo>strong {
+    font-weight: 400;
+    font-size: 24px;
+    font-family: "Anton", sans-serif;
+    margin-right: 4px;
+}
+
+#logo>span {
+    font-family: "Anton", sans-serif;
+    color: var(--maincolor);
+}
+
+nav {
+    flex: 8;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav>a {
+    position: relative;
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: var(--c2);
+    text-decoration: none;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.5s ease;
+}
+
+nav>a:hover {
+    color: var(--maincolor);
+    background: var(--c1);
+}
+
+#register {
+    background: var(--maincolor);
+    color: var(--c3);
+}
+
+#register:hover {
+    background: var(--c3);
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+}
+
+/* Accueil */
+
+#confe-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 110px 0 0;
+}
+
+#confe-desc>h1 {
+    width: 100%;
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+
+#confe-desc>h3 {
+    width: 70%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#confe-desc>h5 {
+    width: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--maincolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#accueil-images {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    background: var(--c1);
+}
+#images-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scrolleft 15s linear infinite;
+}
+
+.images-group {
+    display: flex;
+    gap: 50px;
+    flex-shrink: 0;
+    margin-right: 50px;
+}
+
+.images-group img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#hero-image {
+    width: 50%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#hero-image img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+#presentation {
+    width: 55%;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+#presentation p {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+@keyframes scrolleft {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.page {
+    display: none;
+}
+
+.page:target {
+    display: block;
+}
+
+
+/* footer */
+
+#footer {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--c2);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
