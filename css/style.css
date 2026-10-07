@@ -216,6 +216,70 @@ nav>a:hover {
     display: block;
 }
 
+/* intervenants */
+
+#intervenants-container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+#intervenants-desc {
+    width: 70%;
+    margin: 80px auto 30px;
+    text-align: center;
+}
+
+#intervenants-desc h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+#intervenants-desc p {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#intervenants-container>div {
+    height: 330px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--c1);
+    border-radius: 10px;
+}
+
+#intervenants-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#intervenants-container h3 {
+    margin: 12px 0 5px;
+}
+
+#intervenants-container h4 {
+    margin: 0 0 8px;
+}
+
+#intervenants-container p {
+    margin: 0 0 12px;
+}
+
+#intervenants-container a {
+    text-decoration: none;
+    color: var(--maincolor);
+}
+
+
 
 /* footer */
 
