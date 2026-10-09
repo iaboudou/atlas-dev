@@ -226,8 +226,10 @@ body:not(:has(.page:target)) #accueil {
 #intervenants-container {
     width: 70%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 25px;
 }
 
@@ -249,6 +251,7 @@ body:not(:has(.page:target)) #accueil {
 
 #intervenants-container>div {
     height: 330px;
+    width: 300px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -345,127 +348,106 @@ body:not(:has(.page:target)) #accueil {
 }
 
 
+
 /* s'inscrire */
 
 #s-inscrire {
-    width: 50%;
+    max-width: 600px;
     margin: 0 auto;
     padding: 90px 0 40px;
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, sans-serif;
+    color: var(--c2);
 }
-
 
 #s-inscrire h2 {
     margin-bottom: 25px;
     text-align: center;
-    
+    padding-top: 30px;
+    color: var(--maincolor);
 }
-
 
 #s-inscrire form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
     padding: 30px;
-    border-radius: 10px;
-}
-
-#s-inscrire form>label {
-    padding: 3px;
-    font-weight: 900;
-}
-
-#s-inscrire input,
-#s-inscrire select {
-    padding: 10px;
+    background: var(--c1);
     border: var(--border);
-    border-radius: 6px;
+    border-radius: 8px;
 }
+
+.form-div {
+    margin-bottom: 15px;
+}
+
+.des,
+#msg {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#s-inscrire input[type="text"],
+#s-inscrire input[type="email"],
+#s-inscrire input[type="tel"],
+#s-inscrire select,
+#s-inscrire textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: var(--border);
+    border-radius: 5px;
+}
+
+#s-inscrire input:focus,
+#s-inscrire select:focus,
+#s-inscrire textarea:focus {
+    outline: var(--maincolor)
+}
+
 
 #s-inscrire textarea {
-    padding: 10px;
+    resize: none;
 }
 
-#s-inscrire input {
-    /* border: none; */
-    border-bottom: var(--border);
-    color: var(--maincolor);
-    
-}
-
-.des {
-    font-weight: 900;
-}
-
-#s-inscrire input:focus {
-    outline: none;
-}
-.form-div {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.aterliersouhaites, .participationjournee {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 70px;
-}
-
-.checkbox {
-    display: flex;
+.checkbox,
+.radio {
+    margin-bottom: 6px;
 }
 
 .participationjournee {
-    padding-right: 180px;
+    margin-bottom: 15px;
+}
+
+#accepte {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
 }
 
 #s-inscrire button {
-    padding: 10px;
+    width: 100%;
+    padding: 7px;
+    border-radius: 15px;
     color: var(--c3);
-    background: var(--maincolor);
-    border: 0;
-    border-radius: 6px;
+    font-weight: 600;
+    background-color: var(--maincolor);
 }
 
 #s-inscrire button:hover {
     cursor: pointer;
 }
-
-#accepte {
-    display: flex;
-}
-
-
-#msg {
-     font-weight: 900;
-}
-#s-inscrire>div {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#message {
-    resize: none;
-    height: 200px;
-}
-
 /* footer */
 
 footer {
+    background-color: var(--c1);
     bottom: 0;
     width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 90px;
     color: var(--c2);
     margin-top: 100px;
 }
 
 footer a {
     display: flex;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     gap: 6px;
     height: 30px;
@@ -480,18 +462,6 @@ footer a img {
     object-fit: contain;
 }
 
-footer p {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-
-@media (max-width: 1100px) {
-    #footer {
-        padding-top: 90px;
-    }
-}
 
 @media (max-width: 800px) {
     #s-inscrire {
@@ -504,6 +474,23 @@ footer p {
 
     #accueil-images {
         margin-top: 100px;
+    }
+
+    .aterliersouhaites,
+    .participationjournee .accept {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .participationjournee {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    #accepte>label {
+        font-size: 12px;
+
     }
 }
 
@@ -541,8 +528,21 @@ footer p {
         display: none;
     }
 
-    #intervenants-container {
-        grid-template-columns: repeat(1, 1fr);
+    .aterliersouhaites,
+    .participationjournee .accept {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .participationjournee {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    #accepte>label {
+        font-size: 12px;
+
     }
 }
 
