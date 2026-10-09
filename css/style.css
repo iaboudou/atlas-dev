@@ -436,6 +436,10 @@ body:not(:has(.page:target)) #accueil {
     display: flex;
 }
 
+
+#msg {
+     font-weight: 900;
+}
 #s-inscrire>div {
     margin-top: 20px;
     text-align: center;
