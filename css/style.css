@@ -5,6 +5,7 @@
     --c1: rgba(86, 39, 226, 0.1);
     --c2: #1a1a1a;
     --c3: #ffffff;
+    --border: 0.5px solid #a1a692;
 }
 
 * {
@@ -357,6 +358,7 @@ body:not(:has(.page:target)) #accueil {
 #s-inscrire h2 {
     margin-bottom: 25px;
     text-align: center;
+    
 }
 
 
@@ -370,17 +372,53 @@ body:not(:has(.page:target)) #accueil {
 
 #s-inscrire form>label {
     padding: 3px;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 #s-inscrire input,
-#s-inscrire select,
-#s-inscrire textarea {
+#s-inscrire select {
     padding: 10px;
-    border: 1px solid var(--c2);
+    border: var(--border);
     border-radius: 6px;
 }
 
+#s-inscrire textarea {
+    padding: 10px;
+}
+
+#s-inscrire input {
+    /* border: none; */
+    border-bottom: var(--border);
+    color: var(--maincolor);
+    
+}
+
+.des {
+    font-weight: 900;
+}
+
+#s-inscrire input:focus {
+    outline: none;
+}
+.form-div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.aterliersouhaites, .participationjournee {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+
+.checkbox {
+    display: flex;
+}
+
+.participationjournee {
+    padding-right: 180px;
+}
 
 #s-inscrire button {
     padding: 10px;
@@ -392,6 +430,10 @@ body:not(:has(.page:target)) #accueil {
 
 #s-inscrire button:hover {
     cursor: pointer;
+}
+
+#accepte {
+    display: flex;
 }
 
 #s-inscrire>div {
